@@ -19,7 +19,7 @@ const EmployeeForm = ({ onClose, onSave, editingEmployee, existingEmployees }) =
     const [duplicateError, setDuplicateError] = useState('');
 
     useEffect(() => {
-        fetch('https://localhost:44364/api/employee/states')
+        fetch('https://localhost:5000/api/employee/states')
             .then(res => {
                 if (!res.ok) throw new Error('Failed to fetch states');
                 return res.json();
@@ -106,11 +106,12 @@ const EmployeeForm = ({ onClose, onSave, editingEmployee, existingEmployees }) =
 
         try {
             const employeeToSave = {
-                ...employee,
-                name: employee.name.trim(),
-                dateOfJoin: employee.dateOfJoin ? employee.dateOfJoin.toISOString() : null,
-                dateOfBirth: employee.dateOfBirth ? employee.dateOfBirth.toISOString() : null,
-            };
+    ...employee,
+    name: employee.name.trim(),
+    dateOfJoin: employee.dateOfJoin,
+    dateOfBirth: employee.dateOfBirth,
+};
+
             await onSave(employeeToSave);
         } catch (error) {
             console.error('Error in EmployeeForm handleSubmit:', error);

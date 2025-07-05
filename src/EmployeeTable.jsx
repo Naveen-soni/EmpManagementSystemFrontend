@@ -15,7 +15,7 @@ const EmployeeTable = () => {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' }); 
 
   const itemsPerPage = 5;
-  const API_BASE_URL = 'https://localhost:44364/api/employee';
+  const API_BASE_URL = 'https://localhost:5000/api/employee';
 
   const loadEmployees = async () => {
     setIsLoading(true);
@@ -243,7 +243,7 @@ const EmployeeTable = () => {
 
   const handleViewReport = () => {
     
-    const reportViewerUrl = `https://localhost:44364/api/employee/download-pdf`; 
+    const reportViewerUrl = `https://localhost:5000/api/employee/download-pdf`; 
     window.open(reportViewerUrl, '_blank');
     
   };
