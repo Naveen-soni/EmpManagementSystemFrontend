@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css"; // ✅ Import CSS
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
+import { WishlistProvider } from "./context/WishlistContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <CartProvider>
+        <WishlistProvider>
+          <App />
+        </WishlistProvider>
+      </CartProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
