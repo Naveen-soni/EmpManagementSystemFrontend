@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EmpManagementSystemFrontend/static/css/main.ec25a691.css",
+    "main.js": "/EmpManagementSystemFrontend/static/js/main.74be2883.js",
+    "index.html": "/EmpManagementSystemFrontend/index.html",
+    "main.ec25a691.css.map": "/EmpManagementSystemFrontend/static/css/main.ec25a691.css.map",
+    "main.74be2883.js.map": "/EmpManagementSystemFrontend/static/js/main.74be2883.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec25a691.css",
+    "static/js/main.74be2883.js"
+  ]
+}
